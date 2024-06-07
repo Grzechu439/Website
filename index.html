@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>By Grzechu</title>
+</head>
+<body>
+
+<div id="main">
+    <div class="main">
+        <a href="https://github.com/Grzechu439" target="_blank" class="github-icon">
+            <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" width="24" height="24">
+        </a>
+        <a href="https://www.twitch.tv/grzechu770" target="_blank" class="twitch-icon">
+            <img src="twitch.svg" alt="Twitch" width="24" height="24">
+        </a>
+        <a href="https://www.youtube.com/channel/UCGI6iOc3buV8R63dXD3aRBA" target="_blank" class="youtube-icon">
+            <img src="youtube.svg" alt="YouTube" width="24" height="24">
+        </a>
+    </div>
+    <div class="napis">Grzechu</div>
+</div>
+
+<div class="avatar">
+    <img src="avatar.jpg">
+</div>
+
+
+<script>
+    const g_tloContainer = document.createElement('div');
+    g_tloContainer.classList.add('g_tlo-container');
+    document.body.appendChild(g_tloContainer);
+
+    const createg_tlo = () => {
+        const g_tlo = document.createElement('div');
+        g_tlo.classList.add('g_tlo');
+        g_tloContainer.appendChild(g_tlo);
+
+        const x = Math.random() * window.innerWidth;
+        const y = window.innerHeight;
+        g_tlo.style.left = `${x}px`;
+        g_tlo.style.top = `${y}px`;
+
+        const duration = Math.random() * 2 + 3;
+        g_tlo.style.animationDuration = `${duration}s`;
+    };
+
+    setInterval(createg_tlo, 100);
+</script>
+
+
+</body>
+</html>
